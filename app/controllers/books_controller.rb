@@ -2,6 +2,7 @@ class BooksController < ApplicationController
 
 # root route action
 def index
+	@books = Book.all.order("created_at DESC")
 end
 
 # new book
